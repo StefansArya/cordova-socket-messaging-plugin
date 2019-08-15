@@ -26,7 +26,7 @@ import android.support.v4.app.NotificationCompat;
 import android.support.v4.content.LocalBroadcastManager;
 import android.util.Log;
 
-import com.mapon.mapongo.R;
+// import com.mapon.mapongo.R;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -80,7 +80,7 @@ public class NotificationSocketService extends Service {
 
     protected boolean mMainAppRunningForeground = true;
     protected boolean mMainAppShowAlerts = true;
-
+R
     private BroadcastReceiver notificationReceiver = null;
 
     public static void start(Context context, String connectUrl) {
@@ -158,7 +158,7 @@ public class NotificationSocketService extends Service {
                     .setContentText("Service running")
                     .setContentIntent(PendingIntent.getActivity(getApplicationContext(), 0,
                         notificationIntent, PendingIntent.FLAG_UPDATE_CURRENT))
-                    .setSmallIcon(R.drawable.ic_go_colour)
+                    //.setSmallIcon(R.drawable.ic_go_colour)
                     .setColor(Color.parseColor("#98ca02"))
                     .setPriority(Notification.PRIORITY_MIN)
                     .setVibrate(null)
@@ -489,7 +489,7 @@ public class NotificationSocketService extends Service {
 
         final NotificationCompat.Builder builder = new NotificationCompat.Builder(getApplicationContext(), appName.replaceAll(" ", "_") + "_channel");
         builder
-                .setSmallIcon(R.drawable.ic_go_colour)
+                //.setSmallIcon(R.drawable.ic_go_colour)
                 .setWhen(System.currentTimeMillis()).setAutoCancel(true)
                 .setContentTitle(messageTitle)
                 .setDefaults(Notification.DEFAULT_ALL)
