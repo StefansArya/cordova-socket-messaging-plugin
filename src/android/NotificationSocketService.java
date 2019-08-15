@@ -80,7 +80,7 @@ public class NotificationSocketService extends Service {
 
     protected boolean mMainAppRunningForeground = true;
     protected boolean mMainAppShowAlerts = true;
-R
+
     private BroadcastReceiver notificationReceiver = null;
 
     public static void start(Context context, String connectUrl) {
